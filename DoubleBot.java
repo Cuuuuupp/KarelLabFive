@@ -6,8 +6,8 @@ import kareltherobot.*;
 /**
  * Write a description of class Template here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * drew campillo 
+ * version 1
  */
 public class DoubleBot extends Robot
 {
@@ -23,7 +23,20 @@ public class DoubleBot extends Robot
 
     public void doubleBeepers()
     {
-        // put your code here
-        
+    move();
+    int beeper = 0;
+        while(nextToABeeper()){
+            pickBeeper();
+            beeper++;
     }
+    int i;
+        for(i = 0; i <= beeper; i++) {
+            putBeeper();
+    }
+    move();
+    for(i = 0; i <= (beeper*2)+1; i++){
+        putBeeper();
+    }
+    move();
+}
 }
